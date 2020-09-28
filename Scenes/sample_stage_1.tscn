@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/floor.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/wall.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/gravity_area.tscn" type="PackedScene" id=4]
+
+[node name="Stage" type="Spatial"]
+
+[node name="Area_1" parent="." instance=ExtResource( 4 )]
+transform = Transform( 2.7, 0, 0, 0, 7.4, 0, 0, 0, 10, 21.9965, 8.36112, 0 )
+space_override = 3
+gravity_vec = Vector3( -1, 0, 0 )
+
+[node name="Area_2" parent="." instance=ExtResource( 4 )]
+transform = Transform( -0.0581463, -7.39828, 0, 2.69937, -0.159364, 0, 0, 0, 10, 21.9965, 4.51486, 0 )
+space_override = 3
+gravity_vec = Vector3( 0, 1, 0 )
+
+[node name="floor" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2398, 0, -0.0158691 )
+
+[node name="wall" parent="floor" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.98608, -10.6688 )
+
+[node name="floor2" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 0, 0, 1, 19.9267, 1.91408, 0 )
+
+[node name="wall" parent="floor2" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.98608, -10.6688 )
+
+[node name="floor4" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0, 0, 1, 26.9541, 12.9195, 0.00160503 )
+
+[node name="wall" parent="floor4" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.98608, -10.6688 )
+
+[node name="floor3" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.36501, -0.0596924, 0 )
+
+[node name="wall" parent="floor3" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.98608, -10.6688 )
+
+[node name="player" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.56216, 0 )
+jump = 2

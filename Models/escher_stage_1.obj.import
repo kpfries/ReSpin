@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/escher_stage_1.obj-a70c4035b3105914b8020e4906e93b67.mesh"
+
+[deps]
+
+files=[ "res://.import/escher_stage_1.obj-a70c4035b3105914b8020e4906e93b67.mesh" ]
+
+source_file="res://Models/escher_stage_1.obj"
+dest_files=[ "res://.import/escher_stage_1.obj-a70c4035b3105914b8020e4906e93b67.mesh", "res://.import/escher_stage_1.obj-a70c4035b3105914b8020e4906e93b67.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

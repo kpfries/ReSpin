@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/gravity_area.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/gravity_area.tscn" type="PackedScene" id=2]
+
+[node name="neg_x_pos_y" type="Spatial"]
+
+[node name="Area_y_man4" type="Area" parent="." instance=ExtResource( 2 )]
+transform = Transform( -1.62921e-06, 0, 2, 0, 2, 0, -10, 0, -3.25841e-07, -14.8574, 0.139128, 0.0307822 )
+gravity_distance_scale = 0.023
+gravity_vec = Vector3( 0, 1, 0 )
+script = ExtResource( 1 )
+
+[node name="Area_x_mix3" type="Area" parent="." instance=ExtResource( 2 )]
+transform = Transform( -1.62921e-06, 0, 2, 0, 2, 0, -10, 0, -3.25841e-07, -15.0268, -0.105624, 0.201898 )
+gravity_distance_scale = 0.023
+gravity_vec = Vector3( -1, 0, 0 )
+script = ExtResource( 1 )
+[connection signal="body_entered" from="Area_y_man4" to="Area_y_man4" method="_on_Area_body_entered"]
+[connection signal="body_entered" from="Area_x_mix3" to="Area_x_mix3" method="_on_Area_body_entered"]
